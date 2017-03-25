@@ -1,0 +1,17 @@
+.site-index ul{
+    list-style: none;
+    line-height:20px;
+}
+.site-index ul li{
+    line-height: 35px;
+}
+.site-index ul li .date{
+    font-weight:bold;
+    border:1px solid;
+    display: block;
+    float:left;
+    width:153px;
+    height:78px;
+    padding: 5px;
+    margin:5px;
+}
