@@ -9,7 +9,7 @@ $params = array_merge(
 return [
     'id' => 'app-backend',
     'basePath' => dirname(__DIR__),
-    'defaultRoute'=>'people/index',
+    'defaultRoute'=>'index/index',
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
     'modules' => [],
@@ -30,13 +30,6 @@ return [
         'errorHandler' => [
             'errorAction' => 'people/error',
         ],
-        'db'=>[
-            'class'=>'yii\db\connection',
-            'dsn'=>'mysql:host=localhost;dbname=timeline',
-            'username'=> 'root',
-            'password'=>'12345678',
-            'charset'=>'utf8',
-        ]
     ],
     'params' => $params,
 ];
