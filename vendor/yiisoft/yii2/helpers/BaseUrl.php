@@ -30,7 +30,7 @@ class BaseUrl
      * array format must be:
      *
      * ```php
-     * // generates: /index.php?r=people/index&param1=value1&param2=value2
+     * // generates: /IndexController.php?r=people/index&param1=value1&param2=value2
      * ['people/index', 'param1' => 'value1', 'param2' => 'value2']
      * ```
      *
@@ -38,7 +38,7 @@ class BaseUrl
      * For example,
      *
      * ```php
-     * // generates: /index.php?r=people/index&param1=value1#name
+     * // generates: /IndexController.php?r=people/index&param1=value1#name
      * ['people/index', 'param1' => 'value1', '#' => 'name']
      * ```
      *
@@ -58,10 +58,10 @@ class BaseUrl
      * Below are some examples of using this method:
      *
      * ```php
-     * // /index.php?r=people/index
+     * // /IndexController.php?r=people/index
      * echo Url::toRoute('people/index');
      *
-     * // /index.php?r=people/index&src=ref1#name
+     * // /IndexController.php?r=people/index&src=ref1#name
      * echo Url::toRoute(['people/index', 'src' => 'ref1', '#' => 'name']);
      *
      * // http://www.example.com/index.php?r=site/index
@@ -70,7 +70,7 @@ class BaseUrl
      * // https://www.example.com/index.php?r=site/index
      * echo Url::toRoute('people/index', 'https');
      *
-     * // /index.php?r=post/index     assume the alias "@posts" is defined as "post/index"
+     * // /IndexController.php?r=post/index     assume the alias "@posts" is defined as "post/index"
      * echo Url::toRoute('@posts');
      * ```
      *
@@ -160,13 +160,13 @@ class BaseUrl
      * Below are some examples of using this method:
      *
      * ```php
-     * // /index.php?r=people/index
+     * // /IndexController.php?r=people/index
      * echo Url::to(['people/index']);
      *
-     * // /index.php?r=people/index&src=ref1#name
+     * // /IndexController.php?r=people/index&src=ref1#name
      * echo Url::to(['people/index', 'src' => 'ref1', '#' => 'name']);
      *
-     * // /index.php?r=post/index     assume the alias "@posts" is defined as "/post/index"
+     * // /IndexController.php?r=post/index     assume the alias "@posts" is defined as "/post/index"
      * echo Url::to(['@posts']);
      *
      * // the currently requested URL
@@ -354,13 +354,13 @@ class BaseUrl
      * ```php
      * // assume $_GET = ['id' => 123, 'src' => 'google'], current route is "post/view"
      *
-     * // /index.php?r=post/view&id=123&src=google
+     * // /IndexController.php?r=post/view&id=123&src=google
      * echo Url::current();
      *
-     * // /index.php?r=post/view&id=123
+     * // /IndexController.php?r=post/view&id=123
      * echo Url::current(['src' => null]);
      *
-     * // /index.php?r=post/view&id=100&src=google
+     * // /IndexController.php?r=post/view&id=100&src=google
      * echo Url::current(['id' => 100]);
      * ```
      *

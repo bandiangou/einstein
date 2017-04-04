@@ -57,7 +57,13 @@ $menus = Menu::getMenu();
 
     <div class="right">
         <div class="top">
-            <div><a href="#"><img src="img/user-avatar.png"></a></div>
+            <div class="avatar">
+                <a href="#"><img src="img/user-avatar.png"></a>
+                <ul>
+                    <li><a href="#">个人设置</a></li>
+                    <li><a href="#">退出</a></li>
+                </ul>
+            </div>
         </div>
         <div class="navigation">
             <a href="">首页</a>|<a href="#">管理首页</a>|<a href="#">添加管理员</a>|<a href="#">角色</a>
